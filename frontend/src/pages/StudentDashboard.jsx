@@ -12,7 +12,7 @@ const StudentDashboard = () => {
     const fetchStudent = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/auth/me', {
+        const response = await axios.get('https://cms-2-6zsp.onrender.com/auth/me', {
           headers: { 'Authorization': `Bearer ${token}` },
         });
         setStudent(response.data);

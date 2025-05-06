@@ -12,7 +12,7 @@ const StatusComplete = () => {
   // Fetch students with certification status
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/formstudent/mystudent', {
+      const response = await fetch('https://cms-2-6zsp.onrender.com/formstudent/mystudent', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -23,7 +23,7 @@ const StatusComplete = () => {
         
         const studentsWithCertifications = await Promise.all(
           studentsData.map(async (student) => {
-            const certResponse = await fetch(`http://localhost:5000/api/verification/${student._id}`, {
+            const certResponse = await fetch(`https://cms-2-6zsp.onrender.com/verification/${student._id}`, {
               headers: {
                 'Authorization': `Bearer ${token}`,
               },

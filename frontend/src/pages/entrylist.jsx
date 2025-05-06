@@ -10,7 +10,7 @@ const EntryList = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/formstudent/mystudent', {
+      const response = await fetch('https://cms-2-6zsp.onrender.com/formstudent/mystudent', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -35,7 +35,7 @@ const EntryList = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/formstudent/delete/${id}`, {
+      const response = await fetch(`https://cms-2-6zsp.onrender.com/formstudent/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

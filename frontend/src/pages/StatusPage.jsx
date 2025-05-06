@@ -11,7 +11,7 @@ const StatusPage = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/formstudent/mystudent', {
+      const response = await fetch('https://cms-2-6zsp.onrender.com/formstudent/mystudent', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const StatusPage = () => {
   const fetchVerificationStatus = async (studentsData) => {
     try {
       for (const student of studentsData) {
-        const response = await fetch(`http://localhost:5000/api/verification/${student._id}`, {
+        const response = await fetch(`https://cms-2-6zsp.onrender.com/verification/${student._id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -83,7 +83,7 @@ const StatusPage = () => {
       for (const studentId in certifications) {
         if (certifications.hasOwnProperty(studentId)) {
           const studentCertifications = certifications[studentId];
-          await fetch(`http://localhost:5000/api/verification/${studentId}`, {
+          await fetch(`https://cms-2-6zsp.onrender.com/verification/${studentId}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

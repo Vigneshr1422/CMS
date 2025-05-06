@@ -18,7 +18,7 @@ const ShowStaff = () => {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/api/messages/show-staff', {
+        const response = await fetch('https://cms-2-6zsp.onrender.com/messages/show-staff', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

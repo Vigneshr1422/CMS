@@ -12,7 +12,7 @@ const StaffDashboard = () => {
     const fetchStaff = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:5000/api/auth/me', {
+        const res = await fetch('https://cms-2-6zsp.onrender.com/auth/me', {
           headers: { 'Authorization': `Bearer ${token}` },
         });
         const data = await res.json();

@@ -15,11 +15,11 @@ const AdminDashboard = () => {
         const token = localStorage.getItem('token');
         const headers = { Authorization: `Bearer ${token}` };
 
-        const resAdmin = await fetch('http://localhost:5000/api/auth/me', { headers });
+        const resAdmin = await fetch('https://cms-2-6zsp.onrender.com/auth/me', { headers });
         const adminData = await resAdmin.json();
         setAdmin(adminData);
 
-        const resStaff = await fetch('http://localhost:5000/api/auth/staff/all', { headers });
+        const resStaff = await fetch('https://cms-2-6zsp.onrender.com/auth/staff/all', { headers });
         const staffData = await resStaff.json();
         setStaffList(staffData);
 

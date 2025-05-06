@@ -15,7 +15,7 @@ const StudentDetail = () => {
       const { name, email, role } = filters;
 
       // Make the API call with query params
-      const res = await axios.get('http://localhost:5000/api/students/details', {
+      const res = await axios.get('https://cms-2-6zsp.onrender.com/students/details', {
         params: { name, email, role },
         headers: {
           Authorization: `Bearer ${token}`,

@@ -9,7 +9,7 @@ const History = () => {
     const fetchHistory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:5000/api/history', {
+        const res = await fetch('https://cms-2-6zsp.onrender.com/history', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
