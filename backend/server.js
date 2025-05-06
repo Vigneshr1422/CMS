@@ -25,11 +25,12 @@ const app = express();
 const server = http.createServer(app); // Create an HTTP server
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173','https://vigneshcms.netlify.app' // Match your frontend
+    origin: ['http://localhost:5173', 'https://vigneshcms.netlify.app'],
     methods: ['GET', 'POST', 'PUT'],
     credentials: true,
   },
 });
+
 
 // Socket.IO event handling
 io.on('connection', (socket) => {
@@ -53,9 +54,10 @@ io.on('connection', (socket) => {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173','https://vigneshcms.netlify.app'
+  origin: ['http://localhost:5173', 'https://vigneshcms.netlify.app'],
   credentials: true,
 }));
+
 app.use(express.json());
 
 // Routes
